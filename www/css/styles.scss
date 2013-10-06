@@ -1,0 +1,175 @@
+/**
+ * Custom Styles
+ */
+
+.header {
+  background: url('../img/header-white@2x.png') repeat-x 0 0;
+  background-size: 1020px 80px;
+  height: 54px;
+  margin-bottom: -29px;
+  z-index: 3;
+  position: relative;
+  border: 1px solid transpare nt;
+  border: 0;
+  .side-menu-link {
+    float: left;
+    background: url('../img/menu-icon@2x.png') no-repeat 0 0;
+    height: 42px;
+    width: 42px;
+    background-size: 42px;
+    border: 0;
+    margin: 5px 0 0 0;
+  }
+  .navbar-brand {
+    float: right;
+    padding: 0;
+    .logo-header {
+      height: 42px;
+      margin: 2px 0 0 0;
+    }
+  }
+}
+
+/**
+ * Styles using bootstrap
+ */
+
+html, body {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    overflow: hidden;
+}
+
+#content, .container, .view {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+#map { height: 100%; width: 100%;}
+
+.row-fluid {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.span12 {
+  padding: 0;
+}
+
+@import url('http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css');
+
+/* below is some code reused from http://codepen.io/bradfrost/pen/sjiCv */
+
+.wrap, .navbar-brand {
+  position: relative;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  height: 100%;
+}
+.wrap.active {
+  left: 40%;
+}
+.navbar-brand.active {
+  right: 11em;
+}
+a.side-menu-link {
+  float: left;
+  display: block;
+  padding: 1em;
+}
+
+@media screen and (max-width: 48.063em) {
+  .js .oc {
+    width: 41%;
+    position: absolute;
+    top: -1px;
+    left: -41%;
+    background:  #3c3c3c url("../img/logo-white@2x.png") 70% 97% no-repeat;
+    height: 100%;
+    }
+}
+
+@media screen and (min-width: 48.25em) {
+  a.side-menu-link {
+    display: none;
+  }
+  .wrap.active {
+    left: 0;
+  }
+}
+
+section {
+  height: 100%;
+}
+
+#side-menu {
+  background:  #3c3c3c url("../img/logo-white@2x.png") 70% 97% no-repeat;
+  background-size: 200px;
+  padding: 15px;
+  .ui-panel-inner {
+    padding: 15px;
+  }
+  ul {
+    margin: 0;
+    padding: 0;
+    li {
+      background: url("../img/separator@2x.png") bottom no-repeat;
+      list-style: none;
+      margin: 0;
+      background-size: 80% 2px;
+      a {
+        display: inline-block;
+        height: 60px;
+        padding-left: 50px;
+        background-size: 40px !important;
+        line-height: 60px;
+        color: white;
+        text-decoration: none;
+        font-weight: normal;
+        font-size: 16px;
+        &.mapicon {
+          background: url("../img/menu-icons-map@2x.png") left no-repeat;
+        }
+        &.explore {
+          background: url("../img/menu-icons-explore@2x.png") left no-repeat;
+        }
+        &.events {
+          background: url("../img/menu-icons-special@2x.png") left no-repeat;
+        }
+        &.bookmarks {
+          background: url("../img/menu-icons-bookmarks@2x.png") left no-repeat;
+        }
+      }
+      &:last-child {
+        display: none;
+      }
+    }
+  }
+}
+
+form {
+  .form-group {
+    position: relative;
+    input {
+      font-size: 16px;
+      height: 100%;
+      padding: 6px 0 6px 30px;
+      -webkit-border-radius: 1em;
+      border-radius: 1em;
+    }
+    .clear-button {
+      position: absolute;
+      right: 5%;
+      top: 10%;
+      .glyphicon {
+        color: #000;
+        font-size: 20px;
+      }
+    }
+  }
+}
